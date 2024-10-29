@@ -1,20 +1,7 @@
-:root {
-    --main-color: #006400; /* verde oscuro */
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --card-color: #1e1e1e;
-    --accent-color: #00ff00; /* Verde más claro para decoraciones */
-}
-
-[data-theme="light"] {
-    --bg-color: #f2f2f2;
-    --text-color: #000000;
-    --card-color: #ffffff;
-}
-
 .aviso {
     position: absolute;
-    top: 5em;
+    top: 6em;
+    left: 3em;
     color: red;
     font-size: 1.5em;
     animation: blink 1s infinite;
@@ -29,6 +16,20 @@
     }
 }
 
+:root {
+    --main-color: #006400; /* verde oscuro */
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-color: #1e1e1e;
+    --accent-color: #00ff00; /* Verde más claro para decoraciones */
+}
+
+[data-theme="light"] {
+    --bg-color: #f2f2f2;
+    --text-color: #000000;
+    --card-color: #ffffff;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -41,7 +42,7 @@ body {
 header {
     background-color: var(--main-color);
     color: white;
-    padding: 0.1em;
+    padding: 1em;
     text-align: center;
     position: relative;
 }
@@ -66,7 +67,7 @@ nav a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .theme-switch:hover {
@@ -78,12 +79,13 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
     text-align: center;
     background-color: var(--card-color);
     padding: 2em;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
 }
 
 .hero h1 {
@@ -99,7 +101,7 @@ nav a {
 .cta {
     padding: 1em 2em;
     background-color: var(--accent-color);
-    color: var(--bg-color);
+    color: black;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -111,18 +113,19 @@ nav a {
 
 main {
     padding: 1em;
-    margin-right: 2em;
-    margin-left: 2em;
 }
 
 .bot-info {
     text-align: center;
+    align-items: center;
     background-color: var(--card-color);
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin-bottom: 1em;
-    transition: transform 0.3s;
+    margin-left: 2em;
+    margin-right: 2em;
+    transition: transform 0.3s, background-color 0.5s ease;
 }
 
 .bot-info:hover {
